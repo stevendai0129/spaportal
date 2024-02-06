@@ -1,0 +1,35 @@
+<!-- app.component.html -->
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- 左边菜单栏 -->
+    <ngb-accordion class="col-md-2 d-none d-md-block bg-light sidebar">
+      <ngb-panel>
+        <ng-template ngbPanelTitle>
+          <button class="btn btn-link" (click)="toggleMenu()">
+            Toggle Menu
+          </button>
+        </ng-template>
+        <ng-template ngbPanelContent>
+          <ul class="nav flex-column">
+            <li class="nav-item" *ngFor="let item of menus">
+              <a class="nav-link active" href="#">
+                item.name
+              </a>
+            </li>
+            
+            
+            <!-- 添加更多菜单项 -->
+          </ul>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+
+    <!-- 右边内容区域 -->
+    <main class="col-md-10">
+      <!-- 内容区域的内容放在这里 -->
+      <h1>Welcome to the Dashboard</h1>
+      <p>This is the main content area.</p>
+    </main>
+  </div>
+</div>
